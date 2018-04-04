@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style type="text/css">
+	div, body {
+		margin: 0;
+		padding: 0;
+	}
+	.bg{
+		width: 100%;
+		height: 1080px;
+		background: url(bg.png) center no-repeat;
+		overflow: hidden;
+	}
+	.main_home {
+		width: 500px;
+		height: 500px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		margin: auto;
+		z-index: 10;
+	}
+	.line {
+		width: 350px;
+		height: 350px;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		margin: auto;
+		border: 1px solid rgba(255, 255, 255, .5);
+		border-radius: 50%;
+		z-index: 9;
+		animation: dispear ease-in-out infinite 5s;
+	}
+	.line:nth-of-type(2) {
+		animation-delay: .6s;
+	}
+	.line:nth-of-type(3) {
+		animation-delay: 1.2s;
+	}
+	.line:nth-of-type(4) {
+		animation-delay: 1.8s;
+	}
+	.line:nth-of-type(5) {
+		animation-delay: 2.4s;
+	}
+	.line:nth-of-type(6) {
+		animation-delay: 3s;
+	}
+	@keyframes dispear {
+		0% {
+			width: 350px;
+			height: 350px;
+			border: 1px solid rgba(255, 255, 255, .5);
+		}
+		100% {
+			width: 770px;
+			height: 770px;
+			border: 1px solid rgba(255, 255, 255, 0);
+		}
+	}
+</style>
+<body>
+	<div class="bg">
+		<img src="home_main.png" alt="" class="main_home">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+</body>
+</html>
